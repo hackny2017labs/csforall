@@ -2,3 +2,4 @@ venv/
 *.pem
 *.pyc
 migrations/
+.DS_Store

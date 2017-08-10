@@ -1,9 +1,14 @@
+# -*- coding: utf-8 -*-
+from __future__ import unicode_literals
+
 from django.db import models
+from django.conf import settings
 
 class User(models.Model):
-    first_name = models.CharField(max_length=30)
-    last_name = models.CharField(max_length=30)
-    email = models.EmailField()
+    user = models.OneToOneField(settings.AUTH_USER_MODEL)
+
+    def get_username(self):
+        return self.user.username
 
 class Commitment(models.Model):
     title = models.CharField(max_length=60)
@@ -20,3 +25,4 @@ class Organization(models.Model):
     description = models.TextField()
     create_date = models.DateTimeField(auto_now_add = True)
     contacts = models.ManyToManyField(User)
+

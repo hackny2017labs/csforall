@@ -1,8 +1,7 @@
 # CSFORALL Summit Commitments Project
 
-## Upon committing changes, don't forget to update required packages
 ```sh
-pip freeze > requirements.txt
+pip freeze > requirements.txt # when you commit, don't forget to update required packages you used
 ```
 # Setting up the project
 

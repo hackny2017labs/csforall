@@ -50,9 +50,9 @@ mysql -u root -p
 ```
 
 And in mysql:
-```
-create database cs4AllDB character set utf8
-#I'm told Django expects utf8. The name is for convenience.
+```sh
+ALTER USER 'root'@'localhost' IDENTIFIED BY 'cs4JustAboutEverybody!' # change to relevant password
+CREATE DATABASE cs4AllDB character set utf8 # I'm told Django expects utf8. The name is for convenience.
 exit
 ```
 ## Run the server
@@ -63,4 +63,4 @@ python manage.py makemigrations
 python manage.py migrate
 python manage.py runserver
 ```
-If not, add relevant setup to this doc
+If this doesn't get everything set up, add relevant info to this doc

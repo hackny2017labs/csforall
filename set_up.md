@@ -63,4 +63,4 @@ python manage.py makemigrations
 python manage.py migrate
 python manage.py runserver
 ```
-If not, add relevant setup to this doc
+If this doesn't get everything set up, add relevant info to this doc

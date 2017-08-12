@@ -64,7 +64,7 @@ exit
 
 ```sh
 cd csforall/ # the root file you cloned originally
-python manage.py makemigrations
+python manage.py makemigrations # sometimes you have to do this for different apps-- add the app name in that case
 python manage.py migrate
 python manage.py runserver
 ```

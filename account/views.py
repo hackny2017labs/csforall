@@ -10,6 +10,7 @@ from .forms import UserRegistrationForm, UserEditForm
 from cs4all.models import User
 
 def register(request):
+    logout(request)
     if request.method == 'POST':
         user_form = UserRegistrationForm(request.POST)
 

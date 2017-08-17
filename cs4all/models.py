@@ -7,6 +7,12 @@ from django.conf import settings
 class User(models.Model):
     user = models.OneToOneField(settings.AUTH_USER_MODEL)
 
+class Contact(models.Model):
+    first_name = models.CharField(max_length=60)
+    last_name = models.CharField(max_length=60)
+    email = models.EmailField()
+    commitments = models.ForeignKey('Commitment')
+
 class Commitment(models.Model):
     title = models.CharField(max_length=60)
     description = models.TextField()
@@ -14,12 +20,20 @@ class Commitment(models.Model):
     end_date = models.DateTimeField()
     goal_description = models.TextField()
     goal_target = models.IntegerField()
+    subgroups = models.TextField() #TODO: Change type of subgroup field 
+
+class Followup(models.Model):
+    create_date = models.DateTimeField(auto_now_add = True)
+    description = models.TextField()
     goal_current = models.IntegerField()
-    contacts = models.ManyToManyField(User)
+    media = models.TextField()
+    commitments = models.ForeignKey('Commitment')
+
 
 class Organization(models.Model):
     name = models.CharField(max_length=60)
     description = models.TextField()
     create_date = models.DateTimeField(auto_now_add = True)
-    contacts = models.ManyToManyField(User)
+    commitments = models.ManyToManyField(Commitment)
+    contacts = models.ManyToManyField(Contact)
 

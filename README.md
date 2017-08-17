@@ -56,8 +56,8 @@ mysql -u root -p
 
 And in mysql:
 ```sh
-ALTER USER 'root'@'localhost' IDENTIFIED BY 'cs4JustAboutEverybody!' # change to relevant password
-CREATE DATABASE cs4AllDB character set utf8 # I'm told Django expects utf8. The name is for convenience.
+ALTER USER 'root'@'localhost' IDENTIFIED BY 'cs4JustAboutEverybody!'; # change to relevant password
+CREATE DATABASE cs4AllDB character set utf8; # I'm told Django expects utf8. The name is for convenience.
 exit
 ```
 ## Run the server

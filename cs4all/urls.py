@@ -21,5 +21,6 @@ from account import views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', views.dashboard, name='index'),
-    url(r'^account/', include('account.urls'))
+    url(r'^account/', include('account.urls')),
+    url(r'^commitments/', include('commitments.urls')),
 ]

@@ -33,6 +33,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'cs4all',
     'account',
+    'commitments',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',

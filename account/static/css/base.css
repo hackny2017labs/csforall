@@ -118,6 +118,15 @@ input[type=submit], a.button {
     font-size:14px;
     text-transform:uppercase;
 }
+input[type=navigate], a.button {
+    font-weight:bold;
+    background:#12c064;
+    color:#fff;
+    margin-left: 500px;
+    padding:10px;
+    font-size:14px;
+    text-transform:uppercase;
+}
 .errorlist {
     color:#cc0033;
     float:left;
@@ -131,6 +140,16 @@ input[type=submit], a.button {
     float:left;
     font-size:13px;
 }
+
+/* commitments */
+
+table {
+    padding: 50px 50px
+}
+tr:nth-child(even) {
+    background-color: #e3e5e8;
+}
+
 /* messages */
 ul.messages {
     margin:10px 100px;

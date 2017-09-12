@@ -1,5 +1,18 @@
-{% for commitment in commitments %}
-    <div>
-        <p>{{ commitment.title }}</p>
-    </div>
-{% endfor %}
+{% extends "base.html" %}
+
+{% block content %}
+<h1>My Commitments</h1>
+<div>
+	<table>
+		{% for commitment in commitments %}
+		<tr>
+			<td>{{ commitment.title }}</td>
+			<td>{{ commitment.end_date}}</td>
+			<td>{{ commitment.goal_target}}</td>
+			<td><p><input type="submit" value="Edit"></p></td>
+		</tr>
+		{% endfor %}
+	</table>
+	<a href="{% url "commitment_new" %}"><input type="navigate" value="Create New"></a>
+</div>
+{% endblock %}

@@ -4,6 +4,13 @@
     <h1>New Commitment</h1>
     <form method="POST" class="commitment-form">{% csrf_token %}
         {{ form.as_p }}
+		<table>
+			{% for org in organizations %}
+			<tr>
+				<td>{{ org.name }}</td>
+			</tr>
+			{% endfor %}
+		</table>
         <p><input type="submit" class="save btn btn-default" value="Save"></p>
     </form>
 {% endblock %}

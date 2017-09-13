@@ -8,10 +8,8 @@ from .forms import CommitmentForm, OrganizationForm
 
 def commitment_list(request):
 	commitments = Commitment.objects.filter(create_date__lte=timezone.now()).order_by('create_date')
-	organizations = Organization.objects.filter(create_date__lte=timezone.now()).order_by('create_date')
 	return render(request, 'commitments/commitment_list.html', {
-		'commitments': commitments, 
-		'organizations': organizations})
+		'commitments': commitments})
 
 def commitment_new(request):
     if request.method == "POST": 
@@ -22,4 +20,5 @@ def commitment_new(request):
             commitment.save()
     else:
         form = CommitmentForm()
-    return render(request, 'commitments/commitment_new.html', {'form': form})
+    organizations = Organization.objects.filter(create_date__lte=timezone.now()).order_by('create_date')
+    return render(request, 'commitments/commitment_new.html', {'form': form, 'organizations': organizations})

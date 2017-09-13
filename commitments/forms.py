@@ -5,4 +5,5 @@ class CommitmentForm(forms.ModelForm):
 
     class Meta:
         model = Commitment
-        fields = ('title', 'description', 'end_date', 'goal_description', 'goal_target')
+        fields = ('title', 'description', 'end_date', 'goal_description', 'goal_target',
+        		   'contact_name', 'contact_email')

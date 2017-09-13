@@ -8,6 +8,9 @@ class Organization(models.Model):
     description = models.TextField()
     create_date = models.DateTimeField(auto_now_add = True)
 
+    def __str__(self):
+    	return self.name
+
 class Commitment(models.Model):
     title = models.CharField(max_length=60)
     description = models.TextField()

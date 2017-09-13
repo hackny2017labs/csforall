@@ -22,3 +22,14 @@ def commitment_new(request):
         form = CommitmentForm()
     organizations = Organization.objects.filter(create_date__lte=timezone.now()).order_by('create_date')
     return render(request, 'commitments/commitment_new.html', {'form': form, 'organizations': organizations})
+
+def org_new(request):
+    if request.method == "POST": 
+        form = OrganizationForm(request.POST)
+        if form.is_valid():
+            org = form.save(commit=False)
+            org.create_date = timezone.now()
+            org.save()
+    else:
+        form = OrganizationForm()
+    return render(request, 'commitments/org_new.html', {'form': form})

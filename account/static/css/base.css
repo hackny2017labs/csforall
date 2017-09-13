@@ -8,7 +8,6 @@ body {
 
 p {
     line-height: 1.8;
-    padding: 0 0 0 10px;
 }
 
 a {
@@ -24,8 +23,6 @@ h1, h2, h3, h4, h5 , h6 { font-family: 'Muli', sans-serif; font-weight:normal; }
 
 h1 {
     border-bottom:1px solid #bbb;
-    padding:0 0 10px 10px;
-    margin:10px 0 20px 0;
 }
 
 h2 {
@@ -81,13 +78,19 @@ ol {
     padding-top:4px;
 }
 
-#content {
-    padding:30px 100px;
+.content {
+    margin:10px 10px;
+}
+
+.content-text {
+    margin: 20px
 }
 
 /* forms */
 form {
+    margin: 30px;
     overflow:auto;
+
 }
 
 form p {

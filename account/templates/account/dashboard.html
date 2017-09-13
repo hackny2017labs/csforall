@@ -3,10 +3,23 @@
 {% block title %}Dashboard{% endblock %}
 
 {% block content %}
-    <h1>Dashboard</h1>
-    <p>Welcome to your dashboard. You can <a href="{% url 'edit' %}">edit your profile</a> or <a href="{% url 'password_change' %}">change your password</a>.</p>
-
-	<p>You can also <a href="{% url 'commitment_list' %}">View Commitments</a> or <a href="{% url 'commitment_new' %}">Create a New Commitment</a>.</p>
- {% endblock %}
+<div class="content">
+	<h1>Dashboard</h1>
+	<p>Welcome to your dashboard.</p> 
+	<div class="content-text">
+		<h3>Account Management</h3>
+		<ul style="list-style-type:none">
+			<li><a href="{% url 'edit' %}">Edit Profile</a></li> 
+			<li><a href="{% url 'password_change' %}">Change Password</a></li>
+		</ul>
+		<h3>Other Actions</h3>
+		<ul style="list-style-type:none">
+			<li><a href="{% url 'org_new' %}">Create a New Organization</a>
+			<li><a href="{% url 'commitment_new' %}">Create a New Commitment</a>
+			<li><a href="{% url 'commitment_list' %}">View Commitments</a></li>
+		</ul>
+	</div>
+</div>
+{% endblock %}
 
 

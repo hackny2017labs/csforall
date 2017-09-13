@@ -10,7 +10,7 @@
         <span class="logo"><a href="http://cs4all.nyc/">CS4All</a></span>
         {% if request.user.is_authenticated %}
         <ul class="menu">
-            <li {% if section == "dashboard" %}class="selected"{% endif %}><a href="{% url "dashboard" %}">My dashboard</a></li>
+            <li {% if section == "dashboard" %}class="selected"{% endif %}><a href="{% url "dashboard" %}">My Dashboard</a></li>
         </ul>
         <ul class="menu">
             <li {% if section == "dashboard" %}class="selected"{% endif %}><a href="{% url "commitment_list" %}">Commitments</a></li>

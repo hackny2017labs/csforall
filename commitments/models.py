@@ -15,7 +15,7 @@ class Commitment(models.Model):
     title = models.CharField(max_length=60)
     description = models.TextField()
     create_date = models.DateTimeField(auto_now_add = True)
-    end_date = models.DateTimeField()
+    end_date = models.DateField()
     goal_description = models.TextField()
     goal_target = models.IntegerField()
     subgroups = models.TextField() #TODO: Change type of subgroup field 

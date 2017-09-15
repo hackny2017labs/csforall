@@ -1,18 +1,23 @@
 {% extends "base.html" %}
 
 {% block content %}
+<div class="content">
 <h1>My Commitments</h1>
-<div>
+<div class="content-text">
 	<table>
+		<tr class="toprow"> 
+			<td> Title </td>
+			<td> End Date </td>
+			<td> Contact Name </td>
+		</tr>
 		{% for commitment in commitments %}
 		<tr>
 			<td>{{ commitment.title }}</td>
 			<td>{{ commitment.end_date}}</td>
-			<td>{{ commitment.goal_target}}</td>
-			<td><a href="{% url 'commitment_list' %}">Create Follow Up</a></td>
+			<td>{{ commitment.contact_name}}</td>
 		</tr>
 		{% endfor %}
 	</table>
-	<a href="{% url "commitment_new" %}"><input type="navigate" value="Create New"></a>
+</div>
 </div>
 {% endblock %}

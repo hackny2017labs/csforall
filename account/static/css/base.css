@@ -147,7 +147,20 @@ input[type=navigate], a.button {
 /* commitments */
 
 table {
-    padding: 50px 50px
+    margin: auto;
+    padding: 50px 50px;
+}
+td {
+    padding-left:20px;
+    padding-right:20px;  
+}
+tr {
+    line-height: 50pt;
+    text-align: center;
+}
+tr:first-child {
+    font-size: 14pt;
+    text-decoration: underline;
 }
 tr:nth-child(even) {
     background-color: #e3e5e8;

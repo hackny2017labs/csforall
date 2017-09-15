@@ -1,9 +1,13 @@
 {% extends "base.html" %}
 
 {% block content %}
+<div class="content">
     <h1>New Organization</h1>
+    <div class="content-text">
     <form method="POST" class="organization-form">{% csrf_token %}
         {{ form.as_p }}
         <p><input type="submit" class="save btn btn-default" value="Save"></p>
     </form>
+	</div>
+</div>
 {% endblock %}
